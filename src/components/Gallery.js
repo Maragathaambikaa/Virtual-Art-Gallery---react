@@ -42,7 +42,7 @@ const Gallery = () => {
 
   return (
     <div className="gallery-container">
-      <h1>Virtual Art Gallery</h1>
+      <h1>Discover your favourite!</h1>
 
       {loading && <p>Loading...</p>}
 

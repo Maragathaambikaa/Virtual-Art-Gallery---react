@@ -2,85 +2,101 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  text-align: center;
-  perspective: 1000px; /* Lower value for more noticeable 3D effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1500px; /* Add depth for 3D effects */
 }
 
 .artwork-detail img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width:200px;
+  height: 300px;
+  position: relative;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  object-fit: cover;
 }
 
 .artwork-detail img:hover {
-  transform: scale(1.05) rotateX(5deg) rotateY(5deg); /* Slight tilt with zoom */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Enhance shadow for a lifted feel */
+  transform: scale(1.08) rotateX(5deg) rotateY(5deg); /* Subtle hover effect */
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35); /* Enhanced shadow on hover */
 }
 
 .artwork-detail h1 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: #333;
-  transition: transform 0.3s ease;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
   margin-top: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .artwork-detail h1:hover {
-  transform: translateY(-5px) rotateX(3deg); /* Tilt effect */
+  transform: translateY(-5px);
+  color: #154475; /* Subtle color change on hover */
 }
 
 .artwork-detail p {
-  font-size: 1rem;
-  color: #555;
-  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 15px 0;
+  line-height: 1.6; /* Improve readability */
+  text-align: center;
 }
 
 .artwork-detail button {
-  padding: 12px 25px;
-  margin-top: 20px;
-  background-color: #007BFF;
+  padding: 12px 30px;
+  margin-top: 30px;
+  margin-left: 20px; /* Moves the button slightly to the right */
+  background-color: #0066cc;
+  bottom: 10px;
+  left:50%;
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 25px; /* Rounded button for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Button shadow */
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .artwork-detail button:hover {
-  background-color: #0056b3;
+  background-color: #004b99;
   transform: translateY(-3px);
-}
-
-.artwork-detail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  perspective: 1500px; /* Set perspective */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
 .artwork-detail .artwork-card {
   position: relative;
-  width: 100%;
-  max-width: 400px;
-  transform-style: preserve-3d; /* Ensure 3D effect is applied to the card */
-  transition: transform 0.6s ease;
-}
-
-.artwork-detail img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.4s ease-in-out;
-  object-fit: cover;
+  /* width: 100%; */
+  max-width: 300px;
+  transform-style: preserve-3d; /* Enable 3D effect */
+  transition: transform 0.6s ease, box-shadow 0.4s ease;
 }
 
 .artwork-detail .artwork-card:hover {
-  transform: rotateY(10deg); /* Tilt effect */
+  transform: rotateY(10deg); /* Subtle 3D tilt effect */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
 }
 
 .artwork-detail .artwork-card:hover img {
-  transform: scale(1.1); /* Slight zoom */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+@media (max-width: 768px) {
+  .artwork-detail h1 {
+    font-size: 2rem;
+  }
+
+  .artwork-detail p {
+    font-size: 1rem;
+  }
+
+  .artwork-detail button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
 }

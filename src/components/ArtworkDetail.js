@@ -63,10 +63,10 @@ const ArtworkDetail = () => {
               </div>
               {/* Username below the image */}
               <div className="username">
-                {artwork.user.name}
+               <p> Photographer: {artwork.user.name}</p>
               </div>
             </div>
-            <p>Photographer: {artwork.user.name}</p>
+            {/* <p>Photographer: {artwork.user.name}</p> */}
             <button onClick={() => navigate('/')}>Back to Gallery</button>
           </div>
         )
