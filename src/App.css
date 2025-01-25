@@ -1,0 +1,67 @@
+/* src/App.css */
+.app-content {
+    display: flex;
+  }
+  
+  .sidebar {
+    flex: 0 0 250px; /* Sidebar width */
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Space for the sidebar */
+    overflow-x: hidden;
+    overflow-y:scroll;
+    position:relative;
+  }
+  
+  .main-content h1 {
+    font-size: 2rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* App.css */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0; /* Remove sidebar space on smaller screens */
+  }
+
+  .sidebar {
+    position: absolute;
+    width: 100%;
+    height: auto; /* Allow sidebar to resize */
+  }
+
+  .artwork-card img {
+    height: 150px; /* Adjust image height for mobile */
+  }
+
+  .artwork-detail h1 {
+    font-size: 1.8rem;
+  }
+
+  .artwork-detail p {
+    font-size: 0.9rem;
+  }
+
+  .artwork-detail button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .collection-artworks h2 {
+    font-size: 1.8rem;
+  }
+
+  .artwork-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Reduce column size */
+  }
+}
+
+  

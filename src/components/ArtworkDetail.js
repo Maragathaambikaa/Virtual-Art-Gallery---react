@@ -61,12 +61,8 @@ const ArtworkDetail = () => {
               <div className="artwork-description">
                 <p>{artwork.description || 'No description available'}</p>
               </div>
-              {/* Username below the image */}
-              <div className="username">
-               <p> Photographer: {artwork.user.name}</p>
-              </div>
             </div>
-            {/* <p>Photographer: {artwork.user.name}</p> */}
+            <p>Artist: {artwork.user.name}</p>
             <button onClick={() => navigate('/')}>Back to Gallery</button>
           </div>
         )

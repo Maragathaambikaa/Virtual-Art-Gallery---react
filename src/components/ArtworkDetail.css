@@ -9,10 +9,8 @@
 }
 
 .artwork-detail img {
-  width:200px;
-  height: 300px;
-  position: relative;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -48,11 +46,8 @@
 
 .artwork-detail button {
   padding: 12px 30px;
-  margin-top: 30px;
-  margin-left: 20px; /* Moves the button slightly to the right */
+  margin-top: 20px;
   background-color: #0066cc;
-  bottom: 10px;
-  left:50%;
   color: white;
   border: none;
   cursor: pointer;
@@ -71,8 +66,8 @@
 
 .artwork-detail .artwork-card {
   position: relative;
-  /* width: 100%; */
-  max-width: 300px;
+  width: 100%;
+  max-width: 500px;
   transform-style: preserve-3d; /* Enable 3D effect */
   transition: transform 0.6s ease, box-shadow 0.4s ease;
 }

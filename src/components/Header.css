@@ -1,0 +1,120 @@
+/* Header.css */
+
+.header {
+    width:100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #291b70, #110f24c7, #060414);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 1rem;
+  }
+  
+  .header-logo a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .header-logo a:hover {
+    color: #ffdeeb;
+  }
+  
+  .navbar {
+    flex-grow: 1;
+    text-align: center;
+    margin-left: 3.5rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ffe4f1;
+    text-shadow: 0px 2px 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  .sidebar-toggle-button {
+    font-size: 1.5rem;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar-toggle-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .search-bar input {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #ffadc5;
+    font-size: 1rem;
+    outline: none;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    box-shadow: 0 0 8px rgba(255, 200, 230, 0.8);
+    border-color: white;
+  }
+  
+  .search-bar input::placeholder {
+    color: #ffe4f1;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .search-bar {
+      flex-grow: 1;
+    }
+  
+    .header-logo h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
